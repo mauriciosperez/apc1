@@ -7,15 +7,22 @@
 
 int main(){
 
-  float segundos;
+  int segundos;
 
   printf("informe os segundos: ");
-  scanf("%f", &segundos);
+  scanf("%i", &segundos);
 
-  printf("Em horas: %f ", segundos / 3600);
+  int h = segundos/3600;
+  int m = (segundos%3600)/60;
+  int s = (segundos%3600)%60;
+  printf("%i horas", h);
 
-  printf(" %f minutos", segundos/60);
-  printf(" %f segundos", segundos);
+  printf(" %i minutos", m);
+  printf(" %i segundos\n", s);
+
+  printf("mod min: %i \n", segundos%3600);
+  printf("mod min div: %i\n", (segundos)/60);
+  printf("mod sec: %i\n", (segundos%3600)%60);
   
   return 0;
 }
