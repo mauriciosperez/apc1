@@ -5,7 +5,6 @@ int main() {
     int n;
     int anterior = 0;
     int proximo = 1;
-    int auxiliar = proximo;
 
     printf("Digite um numero: ");
     scanf("%i", &n);
@@ -14,6 +13,7 @@ int main() {
 
         printf("%i\n", proximo);
 
+        int auxiliar = proximo;
 
         proximo = proximo + anterior;
 
